@@ -13,7 +13,7 @@ function UpdateRestaurant() {
 
     const fetchRestaurants = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/api/auth/user/viewrestaurants');
+            const response = await axios.get('https://backend-production-0bea.up.railway.app/api/auth/user/viewrestaurants');
             setRestaurants(response.data);
         } catch (error) {
             console.error('Error in fetching restaurants:', error);
@@ -22,7 +22,7 @@ function UpdateRestaurant() {
 
     const deleteRestaurant = async (name) => {
         try {
-            await axios.delete(`http://localhost:8080/api/auth/restaurent/delete/${name}`);
+            await axios.delete(`https://backend-production-0bea.up.railway.app/api/auth/restaurent/delete/${name}`);
             fetchRestaurants(); 
         } catch (error) {
             console.error('Error in deleting restaurant:', error);
