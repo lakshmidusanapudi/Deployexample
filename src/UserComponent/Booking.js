@@ -33,7 +33,7 @@ function Booking() {
     });
   };
 
-  const baseurl = "http://localhost:8080/api/auth";
+  const baseurl = "https://backend-production-0bea.up.railway.app/api/auth";
 
   const registerAPICall = (formData) => axios.post(baseurl + '/user/booking', formData);
 
