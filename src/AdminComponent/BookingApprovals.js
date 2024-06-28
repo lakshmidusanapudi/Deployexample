@@ -15,7 +15,7 @@ function BookingApprovals() {
     const fetchBookings = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:8080/api/auth/admin/allbookings');
+            const response = await axios.get('https://backend-production-0bea.up.railway.app/api/auth/admin/allbookings');
             setBookings(response.data);
         } catch (error) {
             console.error('Error in fetching bookings:', error);
@@ -28,7 +28,7 @@ function BookingApprovals() {
     const handleApproval = async (id) => {
         try {
             setLoading(true);
-            await axios.put(`http://localhost:8080/api/auth/admin/statusupdate/${id}`);
+            await axios.put(`https://backend-production-0bea.up.railway.app/api/auth/admin/statusupdate/${id}`);
             fetchBookings();
         } catch (error) {
             console.error('Error in approving booking:', error);
@@ -41,7 +41,7 @@ function BookingApprovals() {
     const handleCancel = async (id) => {
         try {
             setLoading(true);
-            await axios.put(`http://localhost:8080/api/auth/admin/statusupdate/cancel/${id}`);
+            await axios.put(`https://backend-production-0bea.up.railway.app/api/auth/admin/statusupdate/cancel/${id}`);
             fetchBookings();
         } catch (error) {
             console.error('Error in cancelling booking:', error);
