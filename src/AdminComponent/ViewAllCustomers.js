@@ -10,7 +10,7 @@ function ViewAllCustomers() {
     useEffect(() => {
       const fetchUsers = async () => {
         try {
-          const response = await axios.get('http://localhost:8080/api/auth/allusers');
+          const response = await axios.get('https://backend-production-0bea.up.railway.app/api/auth/allusers');
           setUsers(response.data);
         } catch (err) {
           console.log(err)
