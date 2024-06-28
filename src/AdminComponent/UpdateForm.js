@@ -16,7 +16,7 @@ function UpdateForm({ restaurant, fetchRestaurants, setSelectedRestaurant }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response=await axios.put(`http://localhost:8080/api/auth/restaurant/update/${restaurant.name}`, formData);
+            const response=await axios.put(`https://backend-production-0bea.up.railway.app/api/auth/restaurant/update/${restaurant.name}`, formData);
             alert(response.data);
             fetchRestaurants();
             setSelectedRestaurant(null);
