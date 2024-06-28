@@ -13,7 +13,7 @@ function ViewStatus() {
 
     const fetchBookingStatus = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/api/auth/user/bookingstatus/${bookingId}`);
+            const response = await axios.get(`https://backend-production-0bea.up.railway.app/api/auth/user/bookingstatus/${bookingId}`);
             setStatus(response.data);
            
         } catch (error) {
