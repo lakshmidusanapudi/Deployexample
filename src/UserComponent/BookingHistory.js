@@ -14,7 +14,7 @@ function BookingHistory() {
         try {
             console.log(mail);
            
-            const response = await axios.get(`http://localhost:8080/api/auth/user/allbookingsby/${mail}`); 
+            const response = await axios.get(`https://backend-production-0bea.up.railway.app/api/auth/user/allbookingsby/${mail}`); 
             console.log(response.data);
             setBookings(response.data);
         } catch (error) {
