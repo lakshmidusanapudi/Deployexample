@@ -30,7 +30,7 @@ const handleFileChange = (e) => {
     [name]: files[0],
     });
   };
-  const baseurl = "http://backend-production-0bea.up.railway.app"
+  const baseurl = "http://backend-production-0bea.up.railway.app/api/auth"
   
   const registerAPICall = (registerObj) => axios.post(baseurl + '/userregister', registerObj);
   
