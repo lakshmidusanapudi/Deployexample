@@ -12,7 +12,7 @@ function ViewRestaurents() {
 
   const fetchRestaurents = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/auth/user/viewrestaurants');
+      const response = await axios.get('https://backend-production-0bea.up.railway.app/api/auth/user/viewrestaurants');
       SetRestaurents(response.data);
     } catch (error) {
       console.error('Error in fetching bookings:', error);
