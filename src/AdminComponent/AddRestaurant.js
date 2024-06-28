@@ -17,7 +17,7 @@ function AddRestaurant() {
   }
   
   
-  const registerAPICall = (registerObj) => axios.post("http://localhost:8080/api/auth/admin/addrestaurant", registerObj);
+  const registerAPICall = (registerObj) => axios.post("backend-production-0bea.up.railway.app/api/auth/admin/addrestaurant", registerObj);
   
   const addRestuarent=()=>{
     
